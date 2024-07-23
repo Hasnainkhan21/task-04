@@ -75,7 +75,7 @@ section p{
         padding-left: 40pxl;
     }
     .Home img{
-        width: 150px;
+        width: 130px;
         height: 150px;
         
         margin-top: 10px;
@@ -102,48 +102,66 @@ section p{
         padding-top: 10px;
     }
 }
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.best-selling{
-    padding-top: 20px;
+/* Basic styling for cards */
+.card {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center; /* Center align text */
 }
-.best-selling h3{
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-bottom: 20px;
+
+.card img {
+    max-width: 100%; /* Ensure images don't exceed card width */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space between image and text */
 }
-.books{
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Arrange cards in a row */
+.card-group {
     display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.books-group{
-    height: 350px;
-    border: 2px solid black;
-    background-color: white;
-    border-radius: 5px;
-    padding-bottom: 10px;
+
+/* Media query for max width 420px */
+@media (max-width: 420px) {
+    .card {
+        width: 80%; /* Adjust card width for smaller screens */
+    }
 }
-.book img{
-    width: 300x;
-    height: 350px;
-    border-radius: 5px;
-    filter: opacity(0.9);
+.card button{
+    background-color:rgb(0, 0, 0) ;
+     color: rgb(255, 255, 255);
+        width: 7vw;
+        height: 7vh;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: -120px;
+        border-radius: 10px;
+        transition: width 0.2s, height 0.2s;
+        cursor: pointer;
 }
-.books-group h6{
-    position: relative;
-    top: -120px;
-    text-align: center;
-    padding: 10px;
-    font-weight: bolder;
-    font-size: large;
-}
-.books button{
-    background-color: black;
-    color: white;
-    width: 10vw;
-    height: 7vh;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    top: -120px;
+.card button:hover{
+    width: 100px;
+   height: 50px;
 }
